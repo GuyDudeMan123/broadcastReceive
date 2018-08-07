@@ -19,15 +19,8 @@ public class ConnectionReceiver extends BroadcastReceiver {
 
         Log.d("API123", "" + intent.getAction());
 
-        if (intent.getAction().equals("com.edu.ness.broadcastreceiver.SOME_ACTION")) {
-            Toast.makeText(context, "SOME_ACTION is received", Toast.LENGTH_LONG).show();
-            return;
-        }
-        if (intent.getAction().equals("android.intent.action.AirplaneMode")) {
-            Log.d("onReceive","android.intent.action.AirplaneMode");
-            Toast.makeText(context, "android.intent.action.AirplaneMode received", Toast.LENGTH_LONG).show();
-            return;
-        }
+                    Toast.makeText(context, intent.getAction + " is received", Toast.LENGTH_LONG).show();
+
 
         ConnectivityManager cm =
                 (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
